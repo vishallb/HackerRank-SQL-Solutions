@@ -1,0 +1,9 @@
+# Question
+Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
+
+# Solution
+SELECT c.name
+FROM city c
+INNER JOIN country cy
+ON c.countrycode = cy.code
+WHERE cy.continent = 'Africa';
