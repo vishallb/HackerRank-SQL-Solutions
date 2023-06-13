@@ -1,0 +1,10 @@
+# Question
+Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+
+# Solution
+SELECT sum(c.population)
+FROM city c
+INNER JOIN country cy
+ON c.countrycode = cy.code
+WHERE cy.continent = 'Asia'
+GROUP BY cy.continent; 
